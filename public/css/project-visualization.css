@@ -1,0 +1,214 @@
+/* table: header, cell, border */
+.table th {
+    text-transform: none;
+    font-size: 13px;
+    color: #fff !important;
+    background-color: #0096e0;
+}
+
+.table td {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 13px;
+}
+
+table tbody td {
+    text-align: left !important;
+}
+
+td:last-child {
+    text-align: center !important;
+}
+
+.custom-table {
+    border-collapse: collapse;
+    border: 1px solid #dee2e6;
+}
+
+.custom-table th {
+    white-space: nowrap;
+}
+
+.custom-table th,
+.custom-table td {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.custom-table tr {
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+}
+
+/* container title */
+.container-title {
+    padding: 16px 24px;
+}
+
+.title-text {
+    align-self: center;
+}
+
+/* status label and dot */
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.dot-complete {
+    background-color: #31cf23;
+}
+
+.dot-progress {
+    background-color: #f0c800;
+}
+
+.dot-risk {
+    background-color: #c21015;
+}
+
+.text-complete {
+    color: #31cf23;
+}
+
+.text-progress {
+    color: #f0c800;
+}
+
+.text-risk {
+    color: #c21015;
+}
+
+/* progress bar */
+.progress-bar-custom {
+    background-color: #0cbfc2 !important;
+}
+
+.progress-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+    z-index: 2;
+}
+
+/* buttons */
+.btn-square {
+    width: 46px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.btn-primary:hover {
+    background-color: #007fc2 !important;
+    border-color: #007fc2 !important;
+}
+
+/* chart layout */
+.chart-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.chart-section-left {
+    border-right: 1px solid #dee2e6;
+}
+
+.chart-header {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.chart-col {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: start;
+}
+
+.chart-adjust {
+    width: 100%;
+    max-width: 311px;
+    margin: auto;
+}
+
+.chart-adjust canvas {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+}
+
+.bar-adjust {
+    width: 100%;
+    max-width: 500px;
+    padding-left: 1rem;
+    align-self: center;
+}
+
+.chart-wrapper {
+    position: relative;
+    min-height: 311px;
+}
+
+.chart-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: none;
+    text-align: center;
+}
+
+.chart-spinner .spinner-border {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* responsive: max-width 767.98px */
+@media (max-width: 767.98px) {
+    .chart-section:last-child {
+        border-top: 1px solid #dee2e6;
+        margin-top: 24px;
+    }
+
+    .chart-section-left {
+        border-right: none !important;
+    }
+
+    .chart-header {
+        border-bottom: none !important;
+        margin-top: 20px;
+        padding-bottom: 0;
+    }
+
+    .bar-adjust {
+        padding-left: 0;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .chart-col {
+        padding: 0 14px;
+    }
+}

@@ -1,0 +1,151 @@
+/* table layout */
+.table th {
+    text-transform: none;
+    font-size: 13px;
+    color: #fff !important;
+    background-color: #0096e0;
+}
+
+.table td {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+table tbody td {
+    text-align: left !important;
+}
+
+/* custom table border */
+.custom-table {
+    border-collapse: collapse;
+    border: 1px solid #dee2e6;
+}
+
+.custom-table th {
+    white-space: nowrap;
+}
+
+.custom-table th,
+.custom-table td {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.custom-table tr {
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+}
+
+/* page container and title */
+.container-title {
+    padding: 16px 24px;
+}
+
+.title-text {
+    align-self: center;
+}
+
+/* timeline card styles */
+.card-timeline-1 {
+    background: #d5fad1;
+    border: 1px solid #16d804;
+    color: #16d804;
+    padding: 18px 24px;
+    border-radius: 10px;
+}
+
+.card-timeline-2 {
+    background: #fedddd;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    padding: 18px 24px;
+    border-radius: 10px;
+}
+
+.card-timeline-3 {
+    background: #fff8d4;
+    border: 1px solid #ffe000;
+    color: #ffe000;
+    padding: 18px 24px;
+    border-radius: 10px;
+}
+
+.card-timeline-4 {
+    background: #ecf0f2;
+    border: 1px solid #bcbcbc;
+    color: #7e7e7e !important;
+    padding: 18px 24px;
+    border-radius: 10px;
+}
+
+/* percentage text colors */
+.card-percent-1 {
+    color: #0d9e00;
+}
+
+.card-percent-2 {
+    color: #ff0000;
+}
+
+.card-percent-3 {
+    color: #ffe000;
+}
+
+.card-percent-4 {
+    color: #7e7e7e;
+}
+
+/* icon styling */
+.text-icon {
+    font-size: 34px;
+}
+
+.mdi:before {
+    font-size: 42px;
+}
+
+.fa-list-check::before {
+    background: #7e7e7e;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+    margin: 0;
+}
+
+/* budget card */
+.card-budget {
+    padding-top: 18px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #f4fbff;
+    border: 1px solid #0096e0;
+    border-radius: 10px;
+    color: #0097e0;
+}
+
+.num-budget {
+    color: #0097e0;
+}
+
+/* square button */
+.btn-square {
+    width: 44px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* badge status */
+.badge-status {
+    border-radius: 20px;
+}
+
+/* .card {
+    border-radius: 10px;
+} */

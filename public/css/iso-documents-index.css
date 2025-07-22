@@ -1,0 +1,36 @@
+.container-iso-document {
+    padding: 16px 24px;
+}
+
+.iso-text {
+    align-self: center;
+}
+
+.card-iso-menu {
+    padding: 40px;
+}
+
+.text-iso-menu {
+    font-size: 14px;
+    font-weight: 500;
+    color: #0097e0;
+}
+
+.bg-iso-item {
+    background: #f0f8ff;
+    cursor: pointer;
+}
+
+.bg-iso-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 40px;
+    background: #0097e0;
+}
+
+.iso-icon-size {
+    font-size: 20px;
+    line-height: 1;
+}

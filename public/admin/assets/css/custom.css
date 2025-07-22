@@ -1,0 +1,91 @@
+/* Primary Button Style */
+.btn-primary {
+    background-color: #0096e0 !important;
+    border-color: #0096e0 !important;
+    color: #fff !important;
+}
+
+/* Primary Button Hover & Focus */
+button[type="button"].btn-primary:hover,
+button[type="button"].btn-primary:focus {
+    background-color: #007fc2 !important;
+    border-color: #007fc2 !important;
+    color: #fff !important;
+}
+
+/* Primary Button Active */
+button[type="button"].btn-primary:active {
+    background-color: #0096e0 !important;
+    color: #fff !important;
+}
+
+/* Icon Size */
+.fa-floppy-disk {
+    font-size: 18px;
+}
+
+/* Toggle Icon Color */
+.icon-toggle-color,
+.icon-toggle-color:hover {
+    color: #6f6b7d;
+}
+
+/* App Brand Header */
+.app-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0 !important;
+    margin-bottom: 20px !important;
+    height: 66px;
+}
+
+/* Logo Wrapper */
+.app-brand-logo-wrapper {
+    width: 120px;
+    transition: width 0.3s ease;
+}
+
+.layout-menu-collapsed .app-brand-logo-wrapper {
+    width: 48px;
+}
+
+.layout-menu-collapsed.layout-menu-hover .app-brand-logo-wrapper {
+    width: 120px;
+}
+
+/* Logo Image */
+.app-brand-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Menu Text & Icon Color */
+.menu-color {
+    color: #141515;
+}
+
+.active .menu-color {
+    color: #ffffff;
+}
+
+.menu-icon {
+    color: #141515;
+}
+
+/* Active Menu Icon */
+.active .menu-link .menu-icon {
+    color: #ffffff !important;
+}
+
+/* .icon-box {
+    padding: 8px;
+    border: 1px solid #f4f4f9;
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+} */

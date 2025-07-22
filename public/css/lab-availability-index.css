@@ -1,0 +1,112 @@
+/* Table Styling */
+.table th {
+    text-transform: none;
+    font-size: 13px;
+    color: #fff !important;
+    background-color: #0096e0;
+}
+
+.table td {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.custom-table {
+    border-collapse: collapse;
+    border: 1px solid #dee2e6;
+}
+
+.custom-table th {
+    white-space: nowrap;
+}
+
+.custom-table th,
+.custom-table td {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.custom-table tr {
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+}
+
+/* Job Card Layout */
+.container-chamber {
+    padding: 16px 24px;
+}
+
+.chamber-text {
+    align-self: center;
+}
+
+/* Main Nav Tabs Styling (Card Level) */
+.card .nav.nav-tabs {
+    padding: 0 14px;
+}
+
+.nav-tabs .nav-link.active {
+    position: relative;
+    color: #0096e0 !important;
+}
+
+.nav-tabs .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #0096e0;
+}
+
+.nav-tabs .nav-link {
+    color: #0096e0;
+    transition: color 0.3s ease;
+    padding-bottom: 14px;
+}
+
+.nav-tabs .nav-link:not(.active):hover {
+    color: #0096e0;
+}
+
+#labTabsContent {
+    padding: 5px 0 0 0;
+}
+
+/* Sub-Tabs for Test Request Section */
+#testRequestSubTabs .nav-link {
+    background-color: transparent;
+    border: none;
+    padding-bottom: 14px;
+    margin: 0 12px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+#testRequestSubTabs .tab-label {
+    color: #000;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 7px;
+    /* transition: all 0.2s ease; */
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#testRequestSubTabs .nav-link.active .tab-label {
+    background-color: #0096e0;
+    color: #fff;
+    font-weight: 600;
+}
+
+.form-label {
+    font-weight: 450;
+}
+/* #testRequestSubTabs {
+        gap: 8px;
+    } */
