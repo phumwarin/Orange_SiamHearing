@@ -6,7 +6,7 @@
 <meta name="description" content="" />
 <base href="{{ url('/') }}/">
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="assets/img/illustrations/Daikin-Logo.png" />
+<link rel="icon" type="image/x-icon" href="assets/img/illustrations/Siamhearing-Logo-Circle.png" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />

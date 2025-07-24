@@ -1,8 +1,8 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme pt-2">
     <div class="app-brand demo">
-        <div class="app-brand-logo-wrapper">
-            <a href="index.html" class="app-brand-link d-flex align-items-center">
-                <img src="assets/img/illustrations/Daikin-Logo.png" alt="Daikin Logo" class="app-brand-logo mw-100" />
+        <div class="app-brand-logo-wrapper w-100 text-center">
+            <a href="index.html" class="app-brand-link d-inline-block">
+                <img src="assets/img/illustrations/Siamhearing-Logo.png" alt="SiamHearing Logo" class="mw-100" />
             </a>
         </div>
 
@@ -17,59 +17,108 @@
                 </span>
             </span>
 
-            <span class="d-block d-xl-none align-middle icon-x">
+            <span class="d-block d-xl-none align-bottom icon-x">
                 {{-- สำหรับ Mobile view: ไอคอน X --}}
                 @include('admin.layout.components.inc_toggle_icons', ['icon' => 'x'])
             </span>
         </a>
     </div>
 
-    {{-- <div class="menu-inner-shadow"></div> --}}
+    <div class="menu-inner-shadow"></div>
 
     <ul class="menu-inner py-3">
         <li class="menu-item">
-            <a href="/admin/job" class="menu-link">
-                @include('admin.layout.components.inc_icons', ['icon' => 'job'])
-                <div data-i18n="Job" class="menu-color">Job</div>
+            <a href="/admin/dashboard" class="menu-link">
+                @include('admin.layout.components.inc_icons', ['icon' => 'dashboard'])
+                <div class="menu-color">แดชบอร์ด</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="/admin/lab-availability" class="menu-link">
-                @include('admin.layout.components.inc_icons', ['icon' => 'lab'])
-                <div data-i18n="Lab Availability" class="menu-color">Lab Availability</div>
+            <a href="/admin/products" class="menu-link">
+                @include('admin.layout.components.inc_icons', ['icon' => 'product'])
+                <div class="menu-color">สินค้า</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="/admin/iso-documents" class="menu-link">
-                @include('admin.layout.components.inc_icons', ['icon' => 'iso'])
-                <div data-i18n="ISO Documents" class="menu-color">ISO Documents</div>
+            <a href="/admin/product-categories" class="menu-link">
+                @include('admin.layout.components.inc_icons', ['icon' => 'category'])
+                <div class="menu-color">หมวดสินค้า</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="/admin/backup-file" class="menu-link">
-                @include('admin.layout.components.inc_icons', ['icon' => 'backup'])
-                <div data-i18n="Backup file" class="menu-color">Backup file</div>
+            <a href="/admin/customers" class="menu-link">
+                @include('admin.layout.components.inc_icons', ['icon' => 'customer'])
+                <div class="menu-color">ลูกค้า</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="/admin/project-status-report" class="menu-link">
+            <a href="/admin/suppliers" class="menu-link">
+                @include('admin.layout.components.inc_icons', ['icon' => 'supplier'])
+                <div class="menu-color">ซัพพลายเออร์</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="/admin/stock-in" class="menu-link">
+                @include('admin.layout.components.inc_icons', ['icon' => 'stock-in'])
+                <div class="menu-color">รับสินค้าเข้า</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="/admin/stock-out" class="menu-link">
+                @include('admin.layout.components.inc_icons', ['icon' => 'stock-out'])
+                <div class="menu-color">ตัดสต๊อก</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="/admin/quotations" class="menu-link">
+                @include('admin.layout.components.inc_icons', ['icon' => 'quotation'])
+                <div class="menu-color">ใบเสนอราคา</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="/admin/sales" class="menu-link">
+                @include('admin.layout.components.inc_icons', ['icon' => 'sales'])
+                <div class="menu-color">เปิดบิลขาย</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="/admin/purchase-orders" class="menu-link">
+                @include('admin.layout.components.inc_icons', ['icon' => 'purchase-order'])
+                <div class="menu-color">สั่งซื้อสินค้า</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="/admin/product-claims" class="menu-link">
+                @include('admin.layout.components.inc_icons', ['icon' => 'claim'])
+                <div class="menu-color">เคลมสินค้า</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="/admin/branch-transfer" class="menu-link">
+                @include('admin.layout.components.inc_icons', ['icon' => 'product-transfer'])
+                <div class="menu-color">โอนสินค้าระหว่างสาขา</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="/admin/reports" class="menu-link">
                 @include('admin.layout.components.inc_icons', ['icon' => 'report'])
-                <div data-i18n="Project Status Report" class="menu-color">Project Status Report</div>
+                <div class="menu-color">รายงาน</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="/admin/project-visualization" class="menu-link">
-                @include('admin.layout.components.inc_icons', ['icon' => 'visualization'])
-                <div data-i18n="Project Visualization" class="menu-color">Project Visualization</div>
+            <a href="/admin/users" class="menu-link">
+                @include('admin.layout.components.inc_icons', ['icon' => 'permission'])
+                <div class="menu-color">ผู้ใช้ / สิทธิ์การเข้าถึง</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="/admin/test-equipment" class="menu-link">
-                @include('admin.layout.components.inc_icons', ['icon' => 'test'])
-                <div data-i18n="Test Equipment" class="menu-color">Test Equipment</div>
+            <a href="/admin/settings" class="menu-link">
+                @include('admin.layout.components.inc_icons', ['icon' => 'settings'])
+                <div class="menu-color">ตั้งค่าระบบ</div>
             </a>
         </li>
     </ul>
+
 </aside>
 <script src="https://unpkg.com/feather-icons"></script>
 <script>
@@ -96,34 +145,34 @@
         feather.replace();
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.querySelector(".layout-menu-toggle");
-    const iconLeft = document.querySelector(".icon-chevron-left");
-    const iconRight = document.querySelector(".icon-chevron-right");
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggleBtn = document.querySelector(".layout-menu-toggle");
+        const iconLeft = document.querySelector(".icon-chevron-left");
+        const iconRight = document.querySelector(".icon-chevron-right");
 
-    function isMenuCollapsed() {
-        return (
-            document.body.classList.contains("layout-menu-collapsed") ||
-            document.documentElement.classList.contains("layout-menu-collapsed") ||
-            document.querySelector(".layout-wrapper")?.classList.contains("layout-menu-collapsed")
-        );
-    }
-
-    function updateMenuToggleIcon() {
-        const collapsed = isMenuCollapsed();
-        if (collapsed) {
-            iconLeft.classList.add("d-none");
-            iconRight.classList.remove("d-none");
-        } else {
-            iconLeft.classList.remove("d-none");
-            iconRight.classList.add("d-none");
+        function isMenuCollapsed() {
+            return (
+                document.body.classList.contains("layout-menu-collapsed") ||
+                document.documentElement.classList.contains("layout-menu-collapsed") ||
+                document.querySelector(".layout-wrapper")?.classList.contains("layout-menu-collapsed")
+            );
         }
-    }
 
-    updateMenuToggleIcon();
+        function updateMenuToggleIcon() {
+            const collapsed = isMenuCollapsed();
+            if (collapsed) {
+                iconLeft.classList.add("d-none");
+                iconRight.classList.remove("d-none");
+            } else {
+                iconLeft.classList.remove("d-none");
+                iconRight.classList.add("d-none");
+            }
+        }
 
-    toggleBtn.addEventListener("click", () => {
-        setTimeout(updateMenuToggleIcon, 100);
+        updateMenuToggleIcon();
+
+        toggleBtn.addEventListener("click", () => {
+            setTimeout(updateMenuToggleIcon, 100);
+        });
     });
-});
 </script>

@@ -1,0 +1,13 @@
+/* โหลดฟอนต์จาก Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap');
+
+/* Global Font แก้ตรงนี้ */
+body,
+html,
+h1, h2, h3, h4, h5, h6,
+p, span, a, div,
+label, input, select, textarea,
+.btn, .card, .table, .form-control {
+    font-family: 'Noto Sans Thai', sans-serif !important;
+    font-size: 14px;
+}

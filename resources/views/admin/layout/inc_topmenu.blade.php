@@ -50,32 +50,13 @@
                     <li>
                       <a class="dropdown-item" href="/branch/manage">
                         <i class="ti ti-user-check me-2 ti-sm"></i>
-                        <span class="align-middle">
-                          {{ @App\Models\Branch::find(session('branch_id'))->name }}
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-account-settings-account.html">
-                        <i class="ti ti-settings me-2 ti-sm"></i>
-                        <span class="align-middle">Settings</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-account-settings-billing.html">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 ti ti-credit-card me-2 ti-sm"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-label-danger w-px-20 h-px-20"
-                            >2</span
-                          >
-                        </span>
+                        <span class="align-middle">ข้อมูลผู้ใช้</span>
                       </a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="/admin/logout">
                         <i class="ti ti-logout me-2 ti-sm"></i>
-                        <span class="align-middle">Log Out</span>
+                        <span class="align-middle">ออกจากระบบ</span>
                       </a>
                     </li>
                   </ul>

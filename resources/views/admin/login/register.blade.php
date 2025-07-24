@@ -3,7 +3,7 @@
 @section('content')
 <div class="login-box register-mode">
   <div class="text-center mb-3">
-    <img src="{{ url('') }}/assets/img/illustrations/Daikin-Logo.png" class="mw-100 logo-scale" alt="Daikin Logo" height="50">
+    <img src="{{ url('') }}/assets/img/illustrations/Siamhearing-Logo.png" class="mw-100 logo-scale" alt="Daikin Logo" height="50">
   </div>
   <h4 class="login-title mb-3">Register</h4>
 

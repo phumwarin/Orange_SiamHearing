@@ -4,23 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DarkModeController;
 use App\Http\Controllers\ColorSchemeController;
-
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\JobController;
-use App\Http\Controllers\IsoDocumentController;
-use App\Http\Controllers\BackupFileController;
-use App\Http\Controllers\TestEquipmentController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/clc', function () {
 
@@ -33,8 +17,8 @@ Route::get('/clc', function () {
 });
 
 // Default Redirect
-Route::get('/', fn() => redirect('/admin/job'));
-Route::get('/admin/job', [UserController::class, 'index']);
+Route::get('/', fn() => redirect('/admin/dashboard'));
+Route::get('/admin/dashboard', [UserController::class, 'index']);
 
 // Admin Routes Group
 Route::prefix('admin')->group(function () {
@@ -51,38 +35,61 @@ Route::prefix('admin')->group(function () {
     Route::get('dark-mode-switcher', [DarkModeController::class, 'switch'])->name('dark-mode-switcher');
     Route::get('color-scheme-switcher/{color_scheme}', [ColorSchemeController::class, 'switch'])->name('color-scheme-switcher');
 
-    // Job Management
-    Route::get('/job', [UserController::class, 'index'])->name('job.index');
-    Route::get('/job/create', [JobController::class, 'create'])->name('job.create');
+    // ────── Dashboard ──────
+    Route::view('/dashboard', 'admin.dashboard.index')->name('dashboard.index');
 
-    // Project Reports & Visualizations
-    Route::view('/project-status-report', 'admin.project_status_report.index')->name('project-status-report.index');
-    Route::view('/project-visualization', 'admin.project_visualization.index')->name('project-visualization.index');
+    // ────── Users / Roles / Permissions ──────
+    Route::view('/users', 'admin.users.index')->name('users.index');
+    Route::view('/roles', 'admin.roles.index')->name('roles.index');
+    Route::view('/permissions', 'admin.permissions.index')->name('permissions.index');
 
-    // Test Equipment
-    Route::get('/test-equipment', [TestEquipmentController::class, 'index'])->name('test-equipment.index');
-    Route::get('/test-equipment/create', [TestEquipmentController::class, 'createEquipment']);
-    Route::post('/test-equipment', [TestEquipmentController::class, 'store']);
-    Route::get('/test-equipment/{id}/edit', [TestEquipmentController::class, 'edit'])->name('test-equipment.edit');
-    Route::put('/test-equipment/{id}', [TestEquipmentController::class, 'update'])->name('test-equipment.update');
-    Route::delete('/test-equipment/{id}', [TestEquipmentController::class, 'destroy'])->name('test-equipment.destroy');
 
-    // ISO Documents
-    Route::view('/iso-documents', 'admin.iso_documents.index')->name('iso-documents.index');
-    Route::get('/iso-documents/manage/{key}', [IsoDocumentController::class, 'manage'])->name('iso-documents.manage');
+    // ────── Products ──────
+    Route::view('products', 'admin.products.index')->name('products.index');
+    Route::get('products/create', function () {
+        return view('admin.products.create');
+    })->name('products.create');
 
-    // Lab Availability
-    Route::view('/lab-availability', 'admin.lab_availability.index')->name('lab-availability.index');
-
-    // Backup File System
-    Route::prefix('backup-file')->name('backup-file.')->group(function () {
-        Route::get('/create-folder', [BackupFileController::class, 'create'])->name('create-folder');
-        Route::post('/store', [BackupFileController::class, 'store'])->name('store');
-        Route::get('/upload-file', [BackupFileController::class, 'createFile'])->name('upload-file');
-        Route::post('/upload-file', [BackupFileController::class, 'storeFile'])->name('upload-file.store');
-        Route::get('/{parentId?}', [BackupFileController::class, 'index'])->name('index');
+    Route::post('admin/products/temp-upload', function (Illuminate\Http\Request $request) {
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = 'temp_' . uniqid() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('temp'), $filename);
+            return response()->json(['filename' => $filename]);
+        }
+        return response()->json(['filename' => null]);
     });
-});
 
-Route::get('dark-mode-switcher', [DarkModeController::class, 'switch'])->name('dark-mode-switcher');
-Route::get('color-scheme-switcher/{color_scheme}', [ColorSchemeController::class, 'switch'])->name('color-scheme-switcher');
+    Route::view('product-categories', 'admin.product-categories.index')->name('product-categories.index');
+    Route::view('product-claims', 'admin.product-claims.index')->name('product-claims.index');
+
+    // ────── Customers / Suppliers ──────
+    Route::view('customers', 'admin.customers.index')->name('customers.index');
+    Route::view('suppliers', 'admin.suppliers.index')->name('suppliers.index');
+
+    // ────── Inventory ──────
+    Route::view('stock-in', 'admin.stock-in.index')->name('stock-in.index');
+    Route::view('stock-out', 'admin.stock-out.index')->name('stock-out.index');
+    Route::view('branch-transfer', 'admin.branch-transfer.index')->name('branch-transfer.index');
+
+    // ────── Purchase / Sales ──────
+    Route::view('purchase-orders', 'admin.purchase-orders.index')->name('purchase-orders.index');
+    Route::view('sales', 'admin.sales.index')->name('sales.index');
+    Route::view('quotations', 'admin.quotations.index')->name('quotations.index');
+
+    // ────── Reports ──────
+    Route::prefix('reports')->name('reports.')->group(function () {
+        Route::view('/', 'admin.reports.index')->name('index');
+        Route::view('/sales', 'admin.reports.sales')->name('sales');
+        Route::view('/stock', 'admin.reports.stock')->name('stock');
+        Route::view('/top-products', 'admin.reports.top-products')->name('top-products');
+
+        Route::get('/export', function () {
+            // ใส่ logic จริงภายหลัง
+            return response()->json(['message' => 'ดาวน์โหลดรายงาน']);
+        })->name('export');
+    });
+
+    // ────── Settings ──────
+    Route::view('settings', 'admin.settings.index')->name('settings.index');
+});

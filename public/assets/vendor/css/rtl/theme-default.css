@@ -1419,8 +1419,9 @@ li.ui-timepicker-selected,
   color: #5d596c;
 }
 .bg-menu-theme.menu-vertical .menu-item.active > .menu-link:not(.menu-toggle) {
-  background: linear-gradient(72.47deg, #0096e0 22.16%, #0096e0 76.47%) !important;
+  background: linear-gradient(270deg, rgba(0, 150, 224, 0.7) 0%, #0096e0 100%) !important;
   color: #fff !important;
+  box-shadow: 0 0.125rem 0.375rem 0 rgba(0, 150, 224, 0.3);
 }
 [dir=rtl] .bg-menu-theme.menu-vertical .menu-item.active > .menu-link:not(.menu-toggle) {
   background: linear-gradient(72.47deg, rgba(115, 103, 240, 0.7) 22.16%, #7367f0 76.47%) !important;

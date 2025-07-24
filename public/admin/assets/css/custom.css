@@ -36,7 +36,7 @@ button[type="button"].btn-primary:active {
     align-items: center;
     justify-content: space-between;
     padding-left: 0 !important;
-    margin-bottom: 20px !important;
+    /* margin-bottom: 12px !important; */
     height: 66px;
 }
 
@@ -45,20 +45,12 @@ button[type="button"].btn-primary:active {
     width: 120px;
     transition: width 0.3s ease;
 }
-
-.layout-menu-collapsed .app-brand-logo-wrapper {
+z .layout-menu-collapsed .app-brand-logo-wrapper {
     width: 48px;
 }
 
 .layout-menu-collapsed.layout-menu-hover .app-brand-logo-wrapper {
     width: 120px;
-}
-
-/* Logo Image */
-.app-brand-logo {
-    width: 100%;
-    height: auto;
-    display: block;
 }
 
 /* Menu Text & Icon Color */
@@ -79,13 +71,12 @@ button[type="button"].btn-primary:active {
     color: #ffffff !important;
 }
 
-/* .icon-box {
-    padding: 8px;
-    border: 1px solid #f4f4f9;
-    border-radius: 10px;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 5px;
-} */
+/* Adjust brand image size */
+.mw-100 {
+    width: 85%;
+}
+
+.menu-inner-shadow {
+    top: 81px !important; /*ปรับ shadow ใต้ Brand*/
+    left: 0;
+}

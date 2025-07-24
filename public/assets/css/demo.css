@@ -4,11 +4,11 @@
 ******************************************************************************/
 
 .light-style .menu .app-brand.demo {
-  height: 64px;
+  height: 80px; /* ปรับขนาด containter ของ logo โหมด light*/
 }
 
 .dark-style .menu .app-brand.demo {
-  height: 64px;
+  height: 80px; /* ปรับขนาด containter ของ logo โหมด Dark*/
 }
 
 .app-brand-logo.demo {
