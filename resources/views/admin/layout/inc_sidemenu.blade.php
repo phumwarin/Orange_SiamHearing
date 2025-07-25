@@ -27,95 +27,135 @@
     <div class="menu-inner-shadow"></div>
 
     <ul class="menu-inner py-3">
+        {{-- ▶ แดชบอร์ด --}}
         <li class="menu-item">
             <a href="/admin/dashboard" class="menu-link">
                 @include('admin.layout.components.inc_icons', ['icon' => 'dashboard'])
                 <div class="menu-color">แดชบอร์ด</div>
             </a>
         </li>
-        <li class="menu-item">
-            <a href="/admin/products" class="menu-link">
+
+        {{-- ▶ สินค้า --}}
+        <li class="menu-item has-sub">
+            <a href="#" class="menu-link menu-toggle">
                 @include('admin.layout.components.inc_icons', ['icon' => 'product'])
                 <div class="menu-color">สินค้า</div>
             </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="/admin/products" class="menu-link">
+                        <div class="menu-color">รายการสินค้า</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/admin/product-categories" class="menu-link">
+                        <div class="menu-color">หมวดสินค้า</div>
+                    </a>
+                </li>
+            </ul>
         </li>
-        <li class="menu-item">
-            <a href="/admin/product-categories" class="menu-link">
-                @include('admin.layout.components.inc_icons', ['icon' => 'category'])
-                <div class="menu-color">หมวดสินค้า</div>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a href="/admin/customers" class="menu-link">
+
+        {{-- ▶ ข้อมูลบุคคล --}}
+        <li class="menu-item has-sub">
+            <a href="#" class="menu-link menu-toggle">
                 @include('admin.layout.components.inc_icons', ['icon' => 'customer'])
-                <div class="menu-color">ลูกค้า</div>
+                <div class="menu-color">ข้อมูลบุคคล</div>
             </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="/admin/customers" class="menu-link">
+                        <div class="menu-color">ลูกค้า</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/admin/suppliers" class="menu-link">
+                        <div class="menu-color">ซัพพลายเออร์</div>
+                    </a>
+                </li>
+            </ul>
         </li>
-        <li class="menu-item">
-            <a href="/admin/suppliers" class="menu-link">
-                @include('admin.layout.components.inc_icons', ['icon' => 'supplier'])
-                <div class="menu-color">ซัพพลายเออร์</div>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a href="/admin/stock-in" class="menu-link">
+
+        {{-- ▶ คลังสินค้า --}}
+        <li class="menu-item has-sub">
+            <a href="#" class="menu-link menu-toggle">
                 @include('admin.layout.components.inc_icons', ['icon' => 'stock-in'])
-                <div class="menu-color">รับสินค้าเข้า</div>
+                <div class="menu-color">คลังสินค้า</div>
             </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="/admin/stock-in" class="menu-link">
+                        <div class="menu-color">รับสินค้าเข้า</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/admin/stock-out" class="menu-link">
+                        <div class="menu-color">ตัดสต๊อก</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/admin/branch-transfer" class="menu-link">
+                        <div class="menu-color">โอนสินค้าระหว่างสาขา</div>
+                    </a>
+                </li>
+            </ul>
         </li>
-        <li class="menu-item">
-            <a href="/admin/stock-out" class="menu-link">
-                @include('admin.layout.components.inc_icons', ['icon' => 'stock-out'])
-                <div class="menu-color">ตัดสต๊อก</div>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a href="/admin/quotations" class="menu-link">
-                @include('admin.layout.components.inc_icons', ['icon' => 'quotation'])
-                <div class="menu-color">ใบเสนอราคา</div>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a href="/admin/sales" class="menu-link">
+
+        {{-- ▶ งานขาย --}}
+        <li class="menu-item has-sub">
+            <a href="#" class="menu-link menu-toggle">
                 @include('admin.layout.components.inc_icons', ['icon' => 'sales'])
-                <div class="menu-color">เปิดบิลขาย</div>
+                <div class="menu-color">งานขาย</div>
             </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="/admin/quotations" class="menu-link">
+                        <div class="menu-color">ใบเสนอราคา</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/admin/sales" class="menu-link">
+                        <div class="menu-color">เปิดบิลขาย</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/admin/product-claims" class="menu-link">
+                        <div class="menu-color">เคลมสินค้า</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/admin/purchase-orders" class="menu-link">
+                        <div class="menu-color">สั่งซื้อสินค้า</div>
+                    </a>
+                </li>
+            </ul>
         </li>
-        <li class="menu-item">
-            <a href="/admin/purchase-orders" class="menu-link">
-                @include('admin.layout.components.inc_icons', ['icon' => 'purchase-order'])
-                <div class="menu-color">สั่งซื้อสินค้า</div>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a href="/admin/product-claims" class="menu-link">
-                @include('admin.layout.components.inc_icons', ['icon' => 'claim'])
-                <div class="menu-color">เคลมสินค้า</div>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a href="/admin/branch-transfer" class="menu-link">
-                @include('admin.layout.components.inc_icons', ['icon' => 'product-transfer'])
-                <div class="menu-color">โอนสินค้าระหว่างสาขา</div>
-            </a>
-        </li>
+
+        {{-- ▶ รายงาน --}}
         <li class="menu-item">
             <a href="/admin/reports" class="menu-link">
                 @include('admin.layout.components.inc_icons', ['icon' => 'report'])
                 <div class="menu-color">รายงาน</div>
             </a>
         </li>
-        <li class="menu-item">
-            <a href="/admin/users" class="menu-link">
+
+        {{-- ▶ ผู้ใช้และการตั้งค่า --}}
+        <li class="menu-item has-sub">
+            <a href="#" class="menu-link menu-toggle">
                 @include('admin.layout.components.inc_icons', ['icon' => 'permission'])
-                <div class="menu-color">ผู้ใช้ / สิทธิ์การเข้าถึง</div>
+                <div class="menu-color">ผู้ใช้ & ตั้งค่า</div>
             </a>
-        </li>
-        <li class="menu-item">
-            <a href="/admin/settings" class="menu-link">
-                @include('admin.layout.components.inc_icons', ['icon' => 'settings'])
-                <div class="menu-color">ตั้งค่าระบบ</div>
-            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="/admin/users" class="menu-link">
+                        <div class="menu-color">ผู้ใช้ / สิทธิ์การเข้าถึง</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/admin/settings" class="menu-link">
+                        <div class="menu-color">ตั้งค่าระบบ</div>
+                    </a>
+                </li>
+            </ul>
         </li>
     </ul>
 
